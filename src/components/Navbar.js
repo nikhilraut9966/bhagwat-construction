@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../assets/images/blogo.jpg";
+import './navbar.css';
+
 
 const Navbar = () => {
   return (
@@ -26,10 +28,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="home.html">Home</a>
+              <a className="nav-link" href="home.html" style={{ color: "white" }}>Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="service.html">Service</a>
+              <a className="nav-link" href="service.html" style={{ color: "white" }}>Service</a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -39,6 +41,7 @@ const Navbar = () => {
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                style={{ color: "white" }}
               >
                 Industry
               </a>
@@ -51,16 +54,16 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="product.html">Product</a>
+              <a className="nav-link" href="product.html" style={{ color: "white" }}>Product</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="about.html">About Us</a>
+              <a className="nav-link" href="about.html" style={{ color: "white" }}>About Us</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact.html">Contact Us</a>
+              <a className="nav-link" href="contact.html" style={{ color: "white" }}>Contact Us</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="career.html">Careers</a>
+              <a className="nav-link" href="career.html" style={{ color: "white" }}>Careers</a>
             </li>
           </ul>
         </div>
