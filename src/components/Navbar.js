@@ -1,18 +1,20 @@
 import React from "react";
 import logo from "../assets/images/blogo.jpg";
-import './navbar.css';
-
+import { Link } from "react-router-dom";
+import "./navbar.css"; // Custom styles
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="#">
-          <img src={logo} alt="Logo" className="me-2" style={{ height: "40px" }} />
-          <span className="text-warning fw-bold">Bhagwat</span>
-          <span className="text-light fw-bold ms-1">Construction</span>
-        </a>
+        {/* Logo + Brand */}
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src={logo} alt="Logo" className="brand-logo me-2" />
+          <span className="brand-warning">Bhagwat</span>
+          <span className="brand-light ms-1">Construction</span>
+        </Link>
 
+        {/* Mobile Toggle */}
         <button
           className="navbar-toggler"
           type="button"
@@ -25,45 +27,34 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Nav Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="home.html" style={{ color: "white" }}>Home</a>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="service.html" style={{ color: "white" }}>Service</a>
+              <Link className="nav-link" to="/service">Service</Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="industryDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ color: "white" }}
-              >
+
+            {/* Industry (no dropdown, just link) */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/industry">
                 Industry
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Electronics</a></li>
-                <li><a className="dropdown-item" href="#">Information Technology</a></li>
-                <li><a className="dropdown-item" href="#">Automotive Industry</a></li>
-                <li><a className="dropdown-item" href="#">Pharma Industry</a></li>
-                <li><a className="dropdown-item" href="#">Mechanical Industry</a></li>
-              </ul>
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/product">Product</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="product.html" style={{ color: "white" }}>Product</a>
+              <Link className="nav-link" to="/about">About Us</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="about.html" style={{ color: "white" }}>About Us</a>
+              <Link className="nav-link" to="/contact">Contact Us</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact.html" style={{ color: "white" }}>Contact Us</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="career.html" style={{ color: "white" }}>Careers</a>
+              <Link className="nav-link" to="/careers">Careers</Link>
             </li>
           </ul>
         </div>

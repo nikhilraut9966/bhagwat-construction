@@ -9,7 +9,7 @@ import support from "../assets/images/support.png";
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-choose-us" className="py-5 bg-light">
+    <section id="why-choose-us" className="py-5" style={{ backgroundColor: "#8f9191ff" }}>
       <div className="container">
         <h2 className="text-center mb-5">Why Choose Us?</h2>
         <div className="row text-center g-4">

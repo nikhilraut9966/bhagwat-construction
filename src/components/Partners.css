@@ -1,0 +1,85 @@
+/* Background Styling */
+.partners-section {
+  position: relative;
+  background: linear-gradient(135deg, #ffecd2, #fb8506); /* soft orange-peach */
+  overflow: hidden;
+  margin-top: 100px; /* gap below navbar */
+}
+
+/* Decorative glow top-left */
+.partners-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 94, 58, 0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+/* Decorative glow bottom-right */
+.partners-section::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(72, 85, 255, 0.2), transparent 70%);
+  border-radius: 50%;
+  filter: blur(25px);
+}
+
+/* Section Title */
+.partners-section h2 {
+  color: #222;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Slider Base */
+.partners-slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+/* Track */
+.partner-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+/* Partner Logos */
+.partner {
+  flex: 0 0 25%; /* 4 logos at a time */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.partner img {
+  max-width: 250px;
+  max-height: 100px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.9);
+  transition: all 0.35s ease;
+}
+
+.partner img:hover {
+  filter: grayscale(0) drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+  transform: scale(1.15) rotate(-2deg);
+}

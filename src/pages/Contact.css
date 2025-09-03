@@ -1,0 +1,75 @@
+.contact-section {
+  background: #f9f9f9;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-container {
+  display: flex;
+  max-width: 1500px;
+  width: 100%;
+  background: #fff;
+  border: 4px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side - Logo */
+.contact-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  padding: 40px;
+}
+
+.contact-logo {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right side - Addresses */
+.contact-right {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.address-card {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.address-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.address-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.address-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}

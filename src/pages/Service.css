@@ -1,0 +1,109 @@
+/* Section styling */
+.services-section {
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* Dark purple to gray */
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient orbs */
+.services-section::before,
+.services-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(80px);
+}
+
+.services-section::before {
+  width: 300px;
+  height: 300px;
+  background: #ff6f61; /* Coral red glow */
+  top: -100px;
+  left: -100px;
+}
+
+.services-section::after {
+  width: 350px;
+  height: 350px;
+  background: #5bc0eb; /* Blue glow */
+  bottom: -120px;
+  right: -120px;
+}
+
+/* Section title */
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Service Card Base */
+.service-card {
+  border-radius: 18px;
+  padding: 40px 25px;
+  margin: 15px 0;
+  text-align: center;
+  height: 100%;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  background-size: 200% 200%;
+  background-position: center;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0px 14px 35px rgba(0, 0, 0, 0.4);
+  background-position: right center; /* Gradient animation */
+}
+
+/* Unique gradient backgrounds for each card */
+.service-card:nth-child(1) {
+  background: linear-gradient(135deg, #ff6f61, #d72638); /* Coral → Crimson */
+}
+
+.service-card:nth-child(2) {
+  background: linear-gradient(135deg, #5bc0eb, #20639b); /* Sky Blue → Navy */
+}
+
+.service-card:nth-child(3) {
+  background: linear-gradient(135deg, #9bc53d, #2d6a4f); /* Olive Green → Forest */
+}
+
+.service-card:nth-child(4) {
+  background: linear-gradient(135deg, #fde74c, #f4a261); /* Yellow → Warm Orange */
+}
+
+.service-card:nth-child(5) {
+  background: linear-gradient(135deg, #845ec2, #d65db1); /* Purple → Pink */
+}
+
+.service-card:nth-child(6) {
+  background: linear-gradient(135deg, #00c9a7, #005f73); /* Teal → Deep Cyan */
+}
+
+/* Card title */
+.service-card .card-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Card text */
+.service-card .card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}

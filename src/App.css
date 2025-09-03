@@ -165,3 +165,7 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  padding-top: 80px; /* equal to navbar height */
+}
